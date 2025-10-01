@@ -16,10 +16,6 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-
-    /* Elemento gráfico sutil no fundo */
-    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 20px 20px;
 }
 
 /* --- Container Principal --- */
@@ -28,7 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem; /* Espaçamento entre os elementos */
+    gap: 1.5rem; /* Espaçamento vertical entre os elementos */
     opacity: 0; /* Começa invisível para animação JS */
     transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.6s ease-out;
@@ -40,38 +36,29 @@ body {
     transform: translateY(0);
 }
 
-
-/* --- Logo --- */
-.logo {
-    width: 90px;
-    height: 90px;
-    border: 3px solid #FFD700;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1a1a1a;
+.logo-image {
+  width: 80px;        /* ajuste aqui (pode ser 60px, 70px, 100px...) */
+  height: auto;       /* mantém proporção */
+  display: block;
+  margin: 0 auto 1rem; /* centraliza */
 }
 
-.logo span {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #FFD700;
-}
+
 
 /* --- Título de Boas-vindas --- */
 .welcome-title {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.5rem; /* Tamanho ajustado para o novo texto */
+    font-weight: 500;
     color: #ffffff;
 }
 
 /* --- Container dos Botões --- */
 .action-buttons {
     display: flex;
-    flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas menores */
-    justify-content: center;
-    gap: 1.5rem;
+    flex-direction: column; /* ALTERAÇÃO PRINCIPAL: Empilha os botões verticalmente */
+    align-items: center; /* Garante que os botões fiquem alinhados ao centro */
+    gap: 1rem; /* Espaçamento entre os botões */
+    width: 100%;
 }
 
 /* --- Estilo dos Botões --- */
@@ -79,27 +66,29 @@ body {
     background-color: transparent;
     border: 2px solid #FFD700;
     color: #FFD700;
-    padding: 15px 30px;
-    border-radius: 50px; /* Bordas totalmente arredondadas */
+    padding: 15px 25px;
+    border-radius: 50px; /* Cantos levemente arredondados */
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
     
     display: flex;
     align-items: center;
+    justify-content: center; /* Centraliza o conteúdo do botão */
     gap: 10px; /* Espaço entre o ícone e o texto */
     
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    width: 100%; /* Faz os botões ocuparem a largura do container */
+    max-width: 320px; /* Define uma largura máxima para não ficarem muito grandes em telas largas */
+    
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Efeito de hover para os botões */
 .btn:hover {
     background-color: #FFD700;
     color: #111111;
-    transform: translateY(-5px); /* Efeito de "levantar" */
-    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
 }
 
 .btn i {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
