@@ -1,9 +1,5 @@
 # Página de Links - Tradição Móveis
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
 ## 📄 Descrição
 
 Este projeto é uma landing page simples e elegante, criada para funcionar como uma central de links ("link in bio") para a **Tradição Móveis**. A página oferece aos clientes um acesso rápido e direto aos principais canais de atendimento e compra da empresa.
@@ -33,7 +29,7 @@ Este é um projeto estático e não requer um servidor ou processo de build comp
 
 1.  **Clone o repositório (ou baixe os arquivos):**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    git clone https://github.com/seu-usuario/seu-repositorio.git
     ```
 
 2.  **Navegue até a pasta do projeto:**
@@ -42,13 +38,10 @@ Este é um projeto estático e não requer um servidor ou processo de build comp
     ```
 
 3.  **Abra o arquivo `index.html`:**
-    * Abra o arquivo `index.html` diretamente no seu navegador de preferência (Google Chrome, Firefox, etc.).
+    - Abra o arquivo `index.html` diretamente no seu navegador de preferência (Google Chrome, Firefox, etc.).
 
 E pronto! A página estará funcionando localmente.
 
 ## ✒️ Autor
 
-Desenvolvido por **Gildo Adriano**.
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/seu-linkedin-aqui/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/seu-github-aqui)
+Desenvolvido por **Gildo Norberto**.
