@@ -1,4 +1,3 @@
-/* --- Reset Básico e Configurações Globais --- */
 * {
     margin: 0;
     padding: 0;
@@ -36,18 +35,17 @@ body {
     transform: translateY(0);
 }
 
-.logo-image {
-  width: 80px;        /* ajuste aqui (pode ser 60px, 70px, 100px...) */
-  height: auto;       /* mantém proporção */
-  display: block;
-  margin: 0 auto 1rem; /* centraliza */
+.logo-circle img { /* Corrigido para a tag img dentro da div */
+    width: 80px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
 }
-
 
 
 /* --- Título de Boas-vindas --- */
 .welcome-title {
-    font-size: 1.5rem; /* Tamanho ajustado para o novo texto */
+    font-size: 1.5rem;
     font-weight: 500;
     color: #ffffff;
 }
@@ -55,9 +53,9 @@ body {
 /* --- Container dos Botões --- */
 .action-buttons {
     display: flex;
-    flex-direction: column; /* ALTERAÇÃO PRINCIPAL: Empilha os botões verticalmente */
-    align-items: center; /* Garante que os botões fiquem alinhados ao centro */
-    gap: 1rem; /* Espaçamento entre os botões */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
 }
 
@@ -67,18 +65,18 @@ body {
     border: 2px solid #FFD700;
     color: #FFD700;
     padding: 15px 25px;
-    border-radius: 50px; /* Cantos levemente arredondados */
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
     
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza o conteúdo do botão */
-    gap: 10px; /* Espaço entre o ícone e o texto */
+    justify-content: center;
+    gap: 10px;
     
-    width: 100%; /* Faz os botões ocuparem a largura do container */
-    max-width: 320px; /* Define uma largura máxima para não ficarem muito grandes em telas largas */
+    width: 100%;
+    max-width: 320px;
     
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -91,4 +89,91 @@ body {
 
 .btn i {
     font-size: 1.1rem;
+}
+
+
+/* --- CSS PARA O DROPDOWN --- */
+
+/* Estilo do container do Dropdown para posicionamento */
+.dropdown-container {
+    width: 100%;
+    max-width: 320px;
+    position: relative;
+}
+
+/* Ajuste no botão principal do dropdown (toggle) para ter espaço para a seta */
+.dropdown-toggle {
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+/* Ícone de seta do dropdown */
+.dropdown-icon {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Gira a seta quando o menu está aberto */
+.dropdown-toggle.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Conteúdo do Dropdown (as opções) */
+.dropdown-content {
+    display: none; /* Escondido por padrão, será visível com JS */
+    position: absolute;
+    top: 100%; /* Posiciona abaixo do botão principal */
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin-top: 5px;
+    
+    /* Estilo visual do container de opções */
+    background-color: #222222; 
+    border: 2px solid #FFD700;
+    border-radius: 30px;
+    padding: 10px;
+    
+    flex-direction: column;
+    gap: 8px;
+    
+    /* Animação para aparecer */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Torna o dropdown visível */
+.dropdown-content.show {
+    display: flex; /* Mostra o container */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo das opções (links) dentro do dropdown */
+.dropdown-btn {
+    background-color:#111111;
+;
+    border: 1px solid #FFD700; 
+    color: #FFD700;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.95rem; 
+    font-weight: 500;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+    width: 100%;
+    max-width: none; 
+    transition: background-color 0.2s ease;
+}
+
+/* Efeito de hover para as opções internas */
+.dropdown-btn:hover {
+    background-color: #FFD700;
+    color: #111111;
 }
